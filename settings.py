@@ -19,10 +19,10 @@ class DevConfig(Config):
 class ProdConfig(Config):
     ENV = 'prod'
     DEBUG = False
-    DATABASE = os.environ.get('DATABASE', 'your prod db')
+    DATABASE = os.environ.get('DATABASE', 'r')
     HOST = os.environ.get('HOST', 'localhost')
-    PASSWD = os.environ.get('PASSWD', 'your password')
-    USER = os.environ.get('USER', 'username')
+    PASSWD = os.environ.get('PASSWD', '050400')
+    USER = os.environ.get('USER', 'jamebluntcc')
     DATABASE_URI = 'mysql://{user}:{passwd}@{host}/{database}'.format(
         user=USER,
         passwd=PASSWD,
