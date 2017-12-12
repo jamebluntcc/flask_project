@@ -1,14 +1,14 @@
 # coding:utf-8
 from MySQLdb import connect
-from const import HOSTNAME, USERNAME, PASSWORD, DATABASE
+from settings import ProdConfig
 
 
 class DB(object):
     def __init__(self,
-                 username=USERNAME,
-                 passwd=PASSWORD,
-                 hostname=HOSTNAME,
-                 db=DATABASE):
+                 username=ProdConfig.USER,
+                 passwd=ProdConfig.PASSWD,
+                 hostname=ProdConfig.HOST,
+                 db=ProdConfig.DATABASE):
         self._con = connect(hostname, username, passwd, db)
 
     @staticmethod
